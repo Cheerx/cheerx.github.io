@@ -20,7 +20,7 @@ permalink:           none
 plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
-title:		           '蟹老板的汉堡王'
+title:		           '蟹脑板的汉堡王'
 description:	       'a personal blog'
 author:              'Chris'
 

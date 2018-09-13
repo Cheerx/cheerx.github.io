@@ -12,6 +12,11 @@ title: Home
   <div class="thumbnail-container">
     <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/assets/img/{{ post.image }}"></a>
   </div>
+    {% if post.image-origin %}
+    <blockquote>
+      <p>{{ post.image-origin }}</p>
+    </blockquote>
+    {% endif %}
   {% endif %}
   <p>
     {% if post.excerpt %}

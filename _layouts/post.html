@@ -8,6 +8,11 @@ layout: default
 
 {% if page.image %}
   <img src="{{ site.github.url }}/assets/img/{{ page.image }}">
+  {% if page.image-origin %}
+    <blockquote>
+      <p>{{ page.image-origin }}</p>
+    </blockquote>
+  {% endif %}
 {% endif %}
 
 {{ content }}

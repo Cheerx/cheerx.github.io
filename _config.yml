@@ -18,6 +18,7 @@ markdown:            kramdown
 highlighter:         rouge
 permalink:           none
 plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
+excerpt_separator: <!--more-->
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		           '蟹脑板的汉堡王'

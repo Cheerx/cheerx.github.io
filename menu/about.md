@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Welcome to Lagrange!
+title: About me
 ---
 
 实验室：[兰州大学DSLab](http://dslab.lzu.edu.cn)

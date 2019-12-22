@@ -3,7 +3,7 @@ layout: post
 title: "[工具]GDB使用速查"
 ---
 
-> last update: 2019-11-10
+> last update: 2019-12-22
 
 GDB是一个由GNU开源组织发布的、UNIX/LINUX操作系统下的、基于命令行的、功能强大的程序调试工具。
 现在基本就写C/C++了，GDB成了开发过程中不可或缺的工具，因此记录一下GDB的常用命令和方法，本文长期更新。
@@ -114,4 +114,4 @@ catch vfork -- Catch calls to vfork
 
 ### GDB调试多进程
 
-在调试多进程程序时，GDB默认追踪父进程，可以通过`set follow-fork-mode child`命令（默认是parent）来追踪子进程。默认情况下，GDB追踪一个进程时不会管另一个进程的状态，可以通过`set detach-on-fork off`命令（默认是on）来达到调试一个进程时另一个进程挂起，此时可以通过`i inferiors`来查看所有进程的状态，也可以通过`inferior <num>`来切换调试的进程。
+在调试多进程程序时，GDB默认追踪父进程，但是有时候我们需要跟到子进程里去，两项配置就可以达到我们的目的。`set follow-fork-mode child`（默认是parent）来追踪子进程，以及`set follow-exec-mode new`（默认是same）来为子进程创建一个新的inferior（这个inferior我理解就是我们调试的程序一个ID），而不是沿用父进程的inferior。当然最有效的办法还是在子进程中加个sleep或者其他什么之类的等待，然后attach到子进程中去，这是通用性最强的，毕竟前面的方法并不是所有GDB都支持。
